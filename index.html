@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="assets/js/jquery-1.12.1.min.js"></script>
+		<title>LOST | Аня</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="menu">
+				<div class="menu">
+					<a href="error.html">Новости</a><a href="error.html" class="middle">Статьи</a><a href="error.html">О нас</a>
+				</div>
+				<div class="icon-hum"></div>
+			</div>
+			<div class="logo-container">
+				<a href="index.html"><img src="assets/images/logo.png"></a>
+			</div>
+			<div class="flag">
+				<a href="login.html">Войти</a>
+			</div>
+		</header>
+		<div class="slider">
+			<div class="images">
+				<div class="item active item-1">
+					<div class="text">
+						<div class="title">The high-street <br> hits</div>
+						<div class="description">12 вещей, на которые вы обязаны обратить <br>свое внимание</div>
+					</div>
+					<div class="image"><img src="assets/images/slider-1.png"></div>
+				</div>
+				<div class="item item-2">
+					<div class="text">
+						<div class="title">SPRING SKIN<br>
+UPDATE </div>
+					<div class="description">Избавляемся от серости
+в голове, быту и гардероб</div>
+					</div>
+					<div class="image"><img src="assets/images/slider-2.png"></div>
+				</div>
+				<div class="item item-3">
+					<div class="text">
+						<div class="title">WORK IT </div>
+					<div class="description">Готовимся к стремительной
+смене сезона</div>
+					</div>
+					
+					<div class="image"><img src="assets/images/slider-3.png"></div>
+				</div>
+			</div>
+			<span class="icon-left" onclick="slideLeft()"></span>
+				<span class="icon-right" onclick="slideRight()"></span>
+
+		</div>
+		<div class="content">
+			<div class="column">
+				<div class="image"><img src="assets/images/slider.png"></div>
+				<div class="text">
+					<div class="title">
+						<div class="author">Николай Долгин</div>
+						<h2>Меняющие реальность</h2>
+					</div>
+					<div class="description">
+						Почему французскому бренду никак <br>
+не удается вернуть былое величие<br>
+последние 15 лет
+					</div>
+					<div class="view">
+						<span>3 дня назад</span>
+						<span class="icon-eye"></span> 1560
+					</div>
+				</div>
+			</div>
+			<div class="news">
+				<div class="title">Новости</div>
+				<div class="content-news">
+					<div class="half">
+						<div class="line">Игорь Николаев стал лицом модного 
+дома из Дегунино</div>
+					<div class="line">Новую кампанию Calvin Klein снова 
+					обвинили в сексизме</div>
+					<div class="line">На Рубчинского завели дело за кражу
+					вещей у пенсионерок</div>
+					</div>
+					<div class="half">
+						<div class="line">Искусственный интеллект от Microsoft
+возненавидел людей и феминисток</div>
+					<div class="line">Джон Малкович обнажился ради своего
+музыкального альбома</div>
+					<div class="line">COMECHANCE опубликовал кампанию
+новой коллекции</div>
+					</div>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="row">
+					<div class="block"><img src="assets/images/block-1.png"></div>
+					<div class="block"><img src="assets/images/block-2.png"></div>
+				</div>
+				<div class="row">
+					<div class="block"><img src="assets/images/block-3.png"></div>
+					<div class="block"><img src="assets/images/block-4.png"></div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="menu">
+				<a href="error.html">Новости</a><a href="error.html" class="middle">Статьи</a><a href="error.html">О нас</a>
+			</div>
+			<div class="social">
+				<img src="assets/images/social.png">
+			</div>
+			<div class="logo">
+				<img src="assets/images/logo.png">
+			</div>
+		</footer>
+		<script>
+			$('.icon-hum').click(function(){
+				$('.icon-hum').toggleClass('active');
+				$('.header .menu .menu').toggle();
+				$('.header .menu .menu').toggleClass('active');
+			})
+			var active = 1;
+			function slideLeft(){
+				active--;
+				if (active <= 0) active = 3;
+				$('.images .item').hide();
+				$('.images .item-'+active).show()
+			}
+			function slideRight(){
+				active++;
+				if (active > 3) active = 1;
+				$('.images .item').hide();
+				$('.images .item-'+active).show();
+			}
+			console.log(name);
+		</script>
+	</body>
+</html>

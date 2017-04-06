@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="assets/js/jquery-1.12.1.min.js"></script>
+		<title>LOST | Аня</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="menu">
+				<div class="menu">
+					<a href="#">Новости</a><a href="#" class="middle">Статьи</a><a href="#">О нас</a>
+				</div>
+				<div class="icon-hum"></div>
+			</div>
+			<div class="logo-container">
+				<a href="index.html"><img src="assets/images/logo.png"></a>
+			</div>
+			<div class="flag">
+				<a href="login.html">Войти</a>
+			</div>
+		</header>
+
+		<div class="content error">
+				<h1 class="title">OOPS, что-то пошло не так</h1>
+		</div>
+		<footer class="footer">
+			<div class="menu">
+				<a href="#">Новости</a><a href="#" class="middle">Статьи</a><a href="#">О нас</a>
+			</div>
+			<div class="social">
+				<img src="assets/images/social.png">
+			</div>
+			<div class="logo">
+				<img src="assets/images/logo.png">
+			</div>
+		</footer>
+		<script>
+			$('.icon-hum').click(function(){
+				$('.icon-hum').toggleClass('active');
+				$('.header .menu .menu').toggle();
+				$('.header .menu .menu').toggleClass('active');
+			})
+			var active = 1;
+			function slideLeft(){
+				active--;
+				if (active <= 0) active = 3;
+				$('.images .item').hide();
+				$('.images .item-'+active).show()
+			}
+			function slideRight(){
+				active++;
+				if (active > 3) active = 1;
+				$('.images .item').hide();
+				$('.images .item-'+active).show();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,439 @@
+@import 'fonts';
+@import 'variable';
+@import 'icons';
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.header {
+	display: block;
+	position: relative;
+	height: 100px;
+	background-color: black;
+	padding-left: $margin;
+	padding-right: $margin;
+	
+	.logo-container{
+		position:absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		top:0px;
+		margin: auto;
+		text-align: center;
+		img{
+			width: auto;
+			height: 64px;
+			vertical-align: middle;
+			padding-top: 18px;
+		}
+	}
+	.menu{
+		position: relative;
+		
+		z-index: 100;
+		line-height: 100px;
+		.menu{
+			display: none;
+			font-family: $font-main;
+			font-weight: 600;
+			font-size: 14.5px;
+			line-height: 35px;
+			color: white;
+			margin-top: 27px;
+			left: 0;
+			position: absolute;
+			text-transform: lowercase;
+			border-bottom: 2px solid white;
+			border-top:  2px solid white;
+			.middle{
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+			a{
+				text-decoration: none;
+				color: white;
+			}
+		}
+		.menu.active{
+			border-bottom: 2px solid black;
+			border-top: 2px solid black;
+		}
+	}
+	.icon-hum{
+		position: relative;
+		top: 5px;
+	}
+	.icon-hum.active{
+		left: 160px;
+	}
+	.icon-hum.active{
+	    -webkit-animation:spin 0.4s linear 1 forwards;
+	    -moz-animation:spin 0.4s linear 1 forwards;
+	    animation:spin 0.4s linear 1 forwards;
+    }
+
+	
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(-90deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-90deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(-90deg); transform:rotate(-90deg); } }
+	
+	.flag{
+		position: absolute;
+		right: $margin;
+		top: 0px;
+		color: white;
+		font-size: 19px;
+		font-weight: 600;
+		text-decoration: none;
+		line-height: 100px;
+		cursor: pointer;
+		z-index: 100;
+		a {
+			color: white;
+			font-size: 19px;
+			font-weight: 600;
+			text-decoration: none;
+			padding: 10px;
+			border: 1px solid rgba(255,255,255,0.15);
+			cursor: pointer;
+		}
+		a:hover{
+			border: 1px solid black;
+		}
+	}
+	
+	}
+.slider{
+	display: block;
+	position: relative;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 100%;
+	margin: auto;
+	
+	.images{
+		width: 100%;
+		.item{
+			height: 400px;
+			position: relative;
+			display: none;
+			.image{
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				top: 0px;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.text{
+				display: table-cell;
+				position: relative;
+				padding-left: calc(50vw);
+				padding-right: $margin;
+				width: 100%;
+				height: 400px;
+				vertical-align: middle;
+				margin: auto;
+				z-index: 1;
+				.title{
+					font-family: $font-main;
+					font-size: 52.7px;
+					font-weight: 500;
+					color: white;
+					text-align: center;
+					text-transform: uppercase;
+					
+				}
+				.description{
+					font-family: Georgia;
+					font-size: 20.68px;
+					font-style: italic;
+					color: white;
+					text-align: center;
+				}
+			}
+			
+		}
+		.item.active{
+			display: table;
+		}
+	}
+	.icon-left{
+		display: inline-block;
+		width: 25px;
+		height: 52px;
+		background-image: url('../images/left.png');
+		background-repeat: no-repeat;
+		background-size: 25px 52px;
+		background-position: center center;
+		cursor: pointer;
+		position: absolute;
+		top:0px;
+		bottom: 0px;
+		margin: auto;
+		left: 56px;z-index:100;
+	}
+	.icon-right{
+		display: inline-block;
+		width: 25px;
+		height: 52px;
+		background-image: url('../images/right.png');
+		background-repeat: no-repeat;
+		background-size: 25px 52px;
+		background-position: center center;
+		cursor: pointer;
+		position: absolute;
+		top:0px;
+		bottom: 0px;
+		margin: auto;
+		right: 56px;
+		z-index: 100;
+	}
+}
+.content.error{
+		min-height: calc(100vh - 200px);
+		background-image: url('../images/slider-2.png');
+		background-size: auto 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		.title{
+			font-family: $font-main;
+			font-size: 56px;
+			margin-top: 56px;
+			margin-bottom: 56px;
+			text-transform: uppercase;
+			border-top: 5px solid white;
+			border-bottom: 5px solid white;
+			text-align: center;
+			margin: auto;
+			margin-bottom: 56px;
+			width: 400px;
+			color: white;
+			}
+}
+.content{
+	padding-top: 46px;
+	padding-left: $margin;
+	padding-right: $margin;
+	width: calc(100% - 212px);
+	overflow: hidden;
+	.column{
+		width: 100%;
+		padding-left: $padding;
+		padding-right: $padding;
+		position: relative;
+		.image{
+			width: 100%;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.text{
+			position: absolute;
+			right: 30px;
+			bottom: 0px;
+			width: calc(50% - 72px);
+			height: 100%;
+			top: 0px;
+			background-color: rgba(255,255,255,0.9);
+			padding-left: 42px;
+			.description, .author, .view{
+				font-family: $font-main;
+				font-size: 19.2px;
+				font-weight: 600;
+				color: #5b5b5b;
+			}
+			.title{
+				padding-top: 116px;
+				font-family: $font-main;
+				font-size: 25px;
+				font-weight: 600;
+				color: #000000;
+			}
+			.description{
+				padding-top: 100px;
+			}
+			.view{
+				position: absolute;
+				bottom: 40px;
+				color: #b3b3b3;
+			}
+			
+		}
+	}
+	.news{
+		width: 100%;
+		padding-left: $padding;
+		padding-right: $padding;
+		padding-top: 46px;
+		position: relative;
+		.content-news{
+			border-bottom: 3px solid black; 
+			padding-top: 45px;
+			padding-bottom: 15px;
+		}
+		.title{
+			width: calc(50% - 60px);
+			font-family: $font-main;
+			font-weight: 600;
+			font-size: 28.8px;
+			padding-left: 50px;
+			border-bottom: 3px solid black; 
+
+		}
+		.half{
+			display: inline-block;
+			width: calc(50% - 5px);
+			
+			.line{
+				font-family: $font-main;
+				font-size: 17,28px;
+				font-weight: 600;
+				text-align: left;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-bottom: 30px;
+			}
+		}
+	}
+	.preview{
+		width: 100%;
+		padding-left: $padding;
+		padding-right: $padding;
+		padding-top: 50px;
+		position: relative;
+		.row{
+			display: flex;
+			padding-bottom: 55px;
+		}
+		.block{
+			flex:1;
+			display: inline-block;
+			width: calc(50% - 65px);
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.block:nth-child(2n){
+			margin-left: 65px;
+		}
+	}
+	.form{
+		min-height: calc(100vh - 200px);
+		.title{
+			font-family: $font-main;
+			font-size: 56px;
+			margin-top: 56px;
+			margin-bottom: 56px;
+			text-transform: uppercase;
+			border-top: 5px solid black;
+			border-bottom: 5px solid black;
+			text-align: center;
+			margin: auto;
+			margin-bottom: 56px;
+			width: 400px;
+		}
+		.line{
+			width: 960px;
+			margin: auto;
+			.input{
+				width: calc(100% - 30px);
+				padding-left: 30px;
+				font-size: 30px;
+				height: 60px;
+				border:none;
+				border:2px solid #d1d1d1;
+			}
+			.btn{
+				width: 100%;
+				background-color: black;
+				color: white;
+				height: 60px;
+				margin-top: 60px;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 60px;
+				font-family: $font-main;
+				font-size: 40px;
+				cursor: pointer;
+				border: 2px solid black;
+			}
+			.btn:hover{
+				color: black;
+				background-color: white;
+			}
+		}
+		
+		input{
+			outline: none;
+		}
+		.line.with{
+			.input{
+				border-bottom: none;
+				border-top: none;
+			}
+			
+		}
+	}
+}
+.footer {
+	display: block;
+	position: relative;
+	height: 100px;
+	background-color: black;
+	padding-left: $margin;
+	padding-right: $margin;
+	.menu{
+		font-family: $font-main;
+		font-weight: 600;
+		font-size: 14.5px;
+		line-height: 35px;
+		color: white;
+		margin-top: 27px;
+		left: $margin;
+		position: absolute;
+		text-transform: lowercase;
+		border-bottom: 2px solid white;
+		border-top:  2px solid white;
+		.middle{
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+	}
+	.social{
+		line-height: 100px;
+		margin: auto;
+		text-align: center;
+		img{
+			vertical-align: middle;
+		}
+	}
+	.logo{
+		position:absolute;
+		right: $margin;
+		bottom: 0px;
+		top:0px;
+		margin: auto;
+		padding-top: 31px;
+		img{
+			width: auto;
+			height: 38px;
+		}
+	}
+	
+	}
